@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Chat Length Tracker",
+  "version": "1.0",
+  "description": "Tracks the total length of a chat conversation in pixels and converts it to meters.",
+  "permissions": ["scripting", "activeTab", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+
+    "default_icon": "icons/icon-16.png"
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
